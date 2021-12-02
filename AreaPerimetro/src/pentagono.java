@@ -3,7 +3,7 @@
 public class pentagono {
     
     private double lado;
-    private double apotema;
+    private double tangente = 1.45;
 
     void pentagono(double lado, double apotema){
         this.lado = lado;
@@ -11,7 +11,7 @@ public class pentagono {
     }
 
     public double area() {
-        return (((5 * this.lado) * apotema)/2);
+        return (((5 * this.lado) * (this.lado / this.tangente))/2);
     } 
 
     public double perimetro(){
