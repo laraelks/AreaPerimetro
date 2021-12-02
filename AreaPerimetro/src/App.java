@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
-
+        double area,perimetro;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y PERIMETRO");
@@ -39,7 +39,8 @@ public class App {
             System.out.print("introduce el lado: ");
             double ladoC=s.nextDouble();
             cuadrado=new cuadrado(ladoC);
-            double area
+             area=cuadrado.area();
+            
 
             break;
 
