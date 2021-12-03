@@ -5,7 +5,7 @@ public class pentagono {
     private double lado;
     private double tangente = 1.45;
 
-    void pentagono(double lado, double apotema){
+    pentagono(double lado, double apotema){
         this.lado = lado;
         this.apotema = apotema;
     }
