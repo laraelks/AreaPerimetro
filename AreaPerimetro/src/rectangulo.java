@@ -3,7 +3,7 @@ public class rectangulo {
     private double base;
     private double altura;
     
-    void rectangulo( double base, double altura){
+    void rectanguloCalculo( double base, double altura){
         this.base= base;
         this.altura=altura;
     }
