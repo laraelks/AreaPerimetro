@@ -6,11 +6,15 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
+<<<<<<< HEAD
+        hexagono hexagono;
+=======
 
     /** Inicio codificación: LAE - 03/12/2021  **/
         pentagono pentagono;
         circulo circulo;
     /** Fin codificación: LAE - 03/12/2021  **/        
+>>>>>>> main
         double area,perimetro;
 
         int opcion;
@@ -71,11 +75,18 @@ public class App {
             System.out.print("introduce el lado: ");
             double ladoC=s.nextDouble();
             cuadrado=new cuadrado(ladoC);
-             area=cuadrado.area();
-            
-
+            area=cuadrado.area();
+            perimetro=cuadrado.perimetro();
+            System.out.printf("el area es %.2f y el perimetro es %.2f \n ",area,perimetro); 
             break;
-
+            case 6:
+            System.out.print("introduce el lado: ");
+            double ladoH=s.nextDouble();
+            hexagono=new hexagono(ladoH);
+            area=hexagono.area();
+            perimetro=hexagono.perimetro();
+            System.out.printf("el area es %.2f y el perimetro es %.2f \n ",area,perimetro); 
+            break;
         }
 
 
