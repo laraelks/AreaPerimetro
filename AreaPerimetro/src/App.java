@@ -4,6 +4,11 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
+
+    /** Inicio codificación: LAE - 03/12/2021  **/
+        pentagono pentagono;
+        circulo circulo;
+    /** Fin codificación: LAE - 03/12/2021  **/        
         double area,perimetro;
 
         int opcion;
@@ -30,10 +35,20 @@ public class App {
             case 3:
             System.out.print("introduce el radio: ");
             double radio=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            circulo = new circulo(radio);
+            area = circulo.area();
+            perimetro = circulo.perimetro();
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 4:
             System.out.print("introduce el lado: ");
             double ladoP=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            pentagono = new pentagono(ladoP);
+            area = pentagono.area();
+            perimetro = pentagono.perimetro();
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 5:
             System.out.print("introduce el lado: ");
