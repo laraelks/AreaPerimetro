@@ -1,7 +1,7 @@
 public class cuadrado {
     private double lado;
 
-    void cuadrado(double lado){
+     cuadrado(double lado){
         this.lado=lado;
     }
 
