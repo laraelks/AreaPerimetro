@@ -4,7 +4,7 @@ public class circulo{
 
     private double radio;
 
-    void circulo(double radio){
+    circulo(double radio){
         this.radio = radio;
     }
 
