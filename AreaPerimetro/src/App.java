@@ -6,7 +6,12 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
-        double area,perimetro, altura;
+
+    /** Inicio codificación: LAE - 03/12/2021  **/
+        pentagono pentagono;
+        circulo circulo;
+    /** Fin codificación: LAE - 03/12/2021  **/        
+        double area,perimetro;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y PERIMETRO");
@@ -45,10 +50,22 @@ public class App {
             case 3:
             System.out.print("introduce el radio: ");
             double radio=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            circulo = new circulo(radio);
+            area = circulo.area();
+            perimetro = circulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 4:
             System.out.print("introduce el lado: ");
             double ladoP=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            pentagono = new pentagono(ladoP);
+            area = pentagono.area();
+            perimetro = pentagono.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 5:
             System.out.print("introduce el lado: ");
