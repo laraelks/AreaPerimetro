@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
@@ -39,6 +41,7 @@ public class App {
             circulo = new circulo(radio);
             area = circulo.area();
             perimetro = circulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
             /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 4:
@@ -48,6 +51,7 @@ public class App {
             pentagono = new pentagono(ladoP);
             area = pentagono.area();
             perimetro = pentagono.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
             /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 5:
