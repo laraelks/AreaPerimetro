@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
-        double area,perimetro;
+        double area,perimetro, altura;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y PERIMETRO");
@@ -22,10 +24,23 @@ public class App {
             case 1:
             System.out.print("introduce el lado: ");
             double ladoT=s.nextDouble();
+            System.out.print("introduce la altura: ");
+            altura= s.nextDouble();
+            triangulo triangulo = new triangulo(ladoT, altura);
+            area= triangulo.area();
+            perimetro= triangulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
             break;
             case 2:
             System.out.print("introduce el lado: ");
             double ladoR=s.nextDouble();
+            System.out.print("introduce la altura: ");
+            altura= s.nextDouble();
+            rectangulo rectangulo = new rectangulo(ladoR, altura);
+            area= rectangulo.area();
+            perimetro= rectangulo.area();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
+
             break;
             case 3:
             System.out.print("introduce el radio: ");
