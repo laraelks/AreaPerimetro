@@ -1,10 +1,20 @@
 import java.util.Scanner;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
+<<<<<<< HEAD
         hexagono hexagono;
+=======
+
+    /** Inicio codificación: LAE - 03/12/2021  **/
+        pentagono pentagono;
+        circulo circulo;
+    /** Fin codificación: LAE - 03/12/2021  **/        
+>>>>>>> main
         double area,perimetro;
 
         int opcion;
@@ -23,18 +33,43 @@ public class App {
             case 1:
             System.out.print("introduce el lado: ");
             double ladoT=s.nextDouble();
+            System.out.print("introduce la altura: ");
+            altura= s.nextDouble();
+            triangulo triangulo = new triangulo(ladoT, altura);
+            area= triangulo.area();
+            perimetro= triangulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
             break;
             case 2:
             System.out.print("introduce el lado: ");
             double ladoR=s.nextDouble();
+            System.out.print("introduce la altura: ");
+            altura= s.nextDouble();
+            rectangulo rectangulo = new rectangulo(ladoR, altura);
+            area= rectangulo.area();
+            perimetro= rectangulo.area();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
+
             break;
             case 3:
             System.out.print("introduce el radio: ");
             double radio=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            circulo = new circulo(radio);
+            area = circulo.area();
+            perimetro = circulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 4:
             System.out.print("introduce el lado: ");
             double ladoP=s.nextDouble();
+            /** Inicio codificación: LAE - 03/12/2021  **/
+            pentagono = new pentagono(ladoP);
+            area = pentagono.area();
+            perimetro = pentagono.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f \n", area,perimetro);
+            /** Fin codificación: LAE - 03/12/2021  **/ 
             break;
             case 5:
             System.out.print("introduce el lado: ");
