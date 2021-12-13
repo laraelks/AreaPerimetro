@@ -6,16 +6,13 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
         cuadrado cuadrado;
-<<<<<<< HEAD
         hexagono hexagono;
-=======
 
     /** Inicio codificación: LAE - 03/12/2021  **/
         pentagono pentagono;
         circulo circulo;
     /** Fin codificación: LAE - 03/12/2021  **/        
->>>>>>> main
-        double area,perimetro;
+        double area,perimetro, altura;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y PERIMETRO");
@@ -27,6 +24,7 @@ public class App {
         System.out.println("4-> Pentagono");
         System.out.println("5-> Cuadrado");
         System.out.println("6-> Hexagono");
+        System.out.println("7->Salir");
         opcion=s.nextInt();
 
         switch(opcion){

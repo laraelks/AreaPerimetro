@@ -2,12 +2,13 @@
 
 public class pentagono {
     
+    
     private double lado;
     private double tangente = 1.45;
 
-    pentagono(double lado, double apotema){
+    pentagono(double lado){
         this.lado = lado;
-        this.apotema = apotema;
+        
     }
 
     public double area() {
