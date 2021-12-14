@@ -12,7 +12,7 @@ public class App {
         pentagono pentagono;
         circulo circulo;
     /** Fin codificación: LAE - 03/12/2021  **/        
-        double area,perimetro, altura;
+        double area,perimetro, altura, alturap, volumen;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y PERIMETRO");
@@ -26,29 +26,37 @@ public class App {
         System.out.println("6-> Hexagono");
         System.out.println("7->Salir");
         opcion=s.nextInt();
-
+ /** Inicio codificación: RMA- 14/12/2021  **/
         switch(opcion){
+            
             case 1:
             System.out.print("introduce el lado: ");
             double ladoT=s.nextDouble();
             System.out.print("introduce la altura: ");
             altura= s.nextDouble();
-            triangulo triangulo = new triangulo(ladoT, altura);
-            area= triangulo.area();
-            perimetro= triangulo.perimetro();
-            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
+            System.out.print("introduce la altura del prisma: ");
+            alturap= s.nextDouble();
+            prismaTriangulo  prismaT= new prismaTriangulo(ladoT, altura,alturap);
+            area= prismaTriangulo.area();
+            volumen= prismaTriangulo.perimetro();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,volumen);
             break;
+
+
             case 2:
             System.out.print("introduce el lado: ");
             double ladoR=s.nextDouble();
             System.out.print("introduce la altura: ");
             altura= s.nextDouble();
-            rectangulo rectangulo = new rectangulo(ladoR, altura);
-            area= rectangulo.area();
-            perimetro= rectangulo.area();
-            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,perimetro);
+            System.out.print("introduce la altura del prisma: ");
+            alturap= s.nextDouble();
+            prismaRectangulo prismaR = new prismaRectangulo(ladoR, altura,alturap);
+            area= prismaRectangulo.area();
+            volumen= prismaRectangulo.area();
+            System.out.printf( "El área es %.2f y el perímetro es %.2f\n",area,volumen);
+          break;
+            /** Fin codificación: RMA - 14/12/2021  **/ 
 
-            break;
             case 3:
             System.out.print("introduce el radio: ");
             double radio=s.nextDouble();
