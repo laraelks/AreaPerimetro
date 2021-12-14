@@ -17,7 +17,7 @@ return baseTriangulo.perimetro ()* this.altura+2*this.baseTriangulo.area();
 
 public double volumen (){
 
-    return baseTriangulo.area*this.altura;
+    return baseTriangulo.area()*this.altura;
 }
  }
   /** Fin codificación: RMA- 14/12/2021  **/
