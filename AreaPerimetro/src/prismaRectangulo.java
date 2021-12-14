@@ -5,7 +5,7 @@ double altura;
 
 prismaRectangulo( double baseT, double alturaH, double altura){
 
-    baseRectangulo= new rectangulo(base, alturaH);
+    baseRectangulo= new rectangulo(baseT, alturaH);
     this.altura = altura;
 
 }
