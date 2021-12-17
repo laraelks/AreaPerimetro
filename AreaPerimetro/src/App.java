@@ -12,7 +12,9 @@ public class App {
     /** Fin codificación: LAE - 03/12/2021  **/        
         double area,perimetro, altura, alturap, volumen, ladoR;
 
-        int opcion;
+        int opcion=0;
+
+        while(opcion != 7){
         System.out.println("CALCULADORA DE AREA Y VOLUMEN");
         System.out.println("========================================");
         System.out.println("Elige entre los siguientes poligonos: ");
@@ -25,7 +27,7 @@ public class App {
         System.out.println("7->Salir");
         opcion=s.nextInt();
  /** Inicio codificación: RMA- 14/12/2021  **/
-        while(opcion != 7){
+        
             switch(opcion){
             
             case 1:
@@ -104,8 +106,8 @@ public class App {
             volumen=prismaH.volumen();
             System.out.printf("el area es %.2f y el volumen es %.2f \n ",area,volumen); 
             break;
-
-          }
+            }
+          
           
         }
 
