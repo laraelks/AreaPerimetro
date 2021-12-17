@@ -1,18 +1,20 @@
 public class prismahexagono {
-    private double lado,alturaP;
+    private double alturaP;
     final double TANGENTE=0.866;
+    hexagono baseHexagono;
 
 
-    prismahexagono(double lado,alturaP){
-        basehexagono=new hexagono(lado);
-        this.altura=alturaP;
+
+    prismahexagono(double lado, double alturaP){
+        baseHexagono=new hexagono(lado);
+        this.alturaP = alturaP;
     }
 
     public double area(){
-        return basehexagono.perimetro()*this.altura+2*this.basehexagono.area();
+        return baseHexagono.perimetro()*this.alturaP+2*this.baseHexagono.area();
     }
     public double volumen(){
 
-      return basehexagono.area()*this.alturaP;  
+      return baseHexagono.area()*this.alturaP;  
     }
 }

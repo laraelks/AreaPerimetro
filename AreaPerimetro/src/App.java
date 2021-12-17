@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
@@ -12,7 +10,7 @@ public class App {
         pentagono pentagono;
         circulo circulo;
     /** Fin codificación: LAE - 03/12/2021  **/        
-        double area,perimetro, altura, alturap, volumen;
+        double area,perimetro, altura, alturap, volumen, ladoR;
 
         int opcion;
         System.out.println("CALCULADORA DE AREA Y VOLUMEN");
@@ -27,7 +25,8 @@ public class App {
         System.out.println("7->Salir");
         opcion=s.nextInt();
  /** Inicio codificación: RMA- 14/12/2021  **/
-        switch(opcion){
+        while(opcion != 7){
+            switch(opcion){
             
             case 1:
             System.out.print("introduce el lado: ");
@@ -36,36 +35,36 @@ public class App {
             altura= s.nextDouble();
             System.out.print("introduce la altura del prisma: ");
             alturap= s.nextDouble();
-            prismaTriangulo  prismaT= new prismaTriangulo(ladoT, altura,alturap);
-            area= prismaTriangulo.area();
-            volumen= prismaTriangulo.volumen();
+            prismaTriangulo  prismaT= new prismaTriangulo(ladoT, altura, alturap);
+            area= prismaT.area();
+            volumen= prismaT.volumen();
             System.out.printf( "El área es %.2f y el volumen es %.2f\n",area,volumen);
             break;
 
 
             case 2:
             System.out.print("introduce el lado: ");
-            double ladoR=s.nextDouble();
+            ladoR=s.nextDouble();
             System.out.print("introduce la altura: ");
             altura= s.nextDouble();
             System.out.print("introduce la altura del prisma: ");
             alturap= s.nextDouble();
             prismaRectangulo prismaR = new prismaRectangulo(ladoR, altura,alturap);
-            area= prismaRectangulo.area();
-            volumen= prismaRectangulo.volumen();
+            area= prismaR.area();
+            volumen= prismaR.volumen();
             System.out.printf( "El área es %.2f y el volumen es %.2f\n",area,volumen);
           break;
             /** Fin codificación: RMA - 14/12/2021  **/ 
 
+            /** Inicio codificación: LAE - 14/12/2021  **/
             case 3:
             System.out.print("introduce el radio: ");
             double radio=s.nextDouble();
-            /** Inicio codificación: LAE - 14/12/2021  **/
             System.out.print("introduce la altura del prisma: ");
             alturap= s.nextDouble();
             cilindro cilindroC = new cilindro(alturap, radio);
-            area = cilindro.area();
-            volumen = cilindro.volumen();
+            area = cilindroC.area();
+            volumen = cilindroC.volumen();
             System.out.printf( "El área es %.2f y el volumen es %.2f \n", area,volumen);
             /** Fin codificación: LAE - 14/12/2021  **/ 
             break;
@@ -77,8 +76,8 @@ public class App {
             System.out.print("introduce la altura del prisma: ");
             alturap= s.nextDouble();
             prismaPentagono prismaP= new prismaPentagono(alturap, ladoP);
-            area = prismaPentagono.area();
-            volumen = prismaPentagono.volumen();
+            area = prismaP.area();
+            volumen = prismaP.volumen();
             System.out.printf( "El área es %.2f y el volumen es %.2f \n", area,volumen);
             /** Fin codificación: LAE - 14/12/2021  **/ 
             break;
@@ -88,10 +87,10 @@ public class App {
             double ladoC=s.nextDouble();
             System.out.print("introduce la altura del prisma: ");
             alturap= s.nextDouble();
-            prismacuadrado prismaC = new prismacuadrado(ladoR,alturap);
+            prismacuadrado prismaC = new prismacuadrado(ladoC,alturap);
             cuadrado=new cuadrado(ladoC);
-            area=cuadrado.area();
-            volumen=cuadrado.volumen();
+            area=prismaC.area();
+            volumen=prismaC.volumen();
             System.out.printf("el area es %.2f y el volumen es %.2f \n ",area,volumen); 
             break;
 
@@ -101,14 +100,15 @@ public class App {
             System.out.print("introduce altura del prisma: ");
             alturap=s.nextDouble();
             prismahexagono prismaH = new prismahexagono(ladoH,alturap);
-
-            
-            area=hexagono.area();
-            perimetro=hexagono.perimetro();
+            area=prismaH.area();
+            volumen=prismaH.volumen();
             System.out.printf("el area es %.2f y el volumen es %.2f \n ",area,volumen); 
             break;
+
+          }
+          
         }
 
-
+    
     }
 }
